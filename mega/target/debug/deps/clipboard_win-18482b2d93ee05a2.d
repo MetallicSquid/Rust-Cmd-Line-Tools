@@ -1,0 +1,11 @@
+C:\Users\gcmac\Desktop\rust-cmd-line-tools\mega\target\debug\deps\clipboard_win-18482b2d93ee05a2.rmeta: C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src/lib.rs C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\utils.rs C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\formats.rs C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\raw.rs C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\image.rs
+
+C:\Users\gcmac\Desktop\rust-cmd-line-tools\mega\target\debug\deps\libclipboard_win-18482b2d93ee05a2.rlib: C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src/lib.rs C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\utils.rs C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\formats.rs C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\raw.rs C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\image.rs
+
+C:\Users\gcmac\Desktop\rust-cmd-line-tools\mega\target\debug\deps\clipboard_win-18482b2d93ee05a2.d: C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src/lib.rs C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\utils.rs C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\formats.rs C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\raw.rs C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\image.rs
+
+C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src/lib.rs:
+C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\utils.rs:
+C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\formats.rs:
+C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\raw.rs:
+C:\Users\gcmac\.cargo\registry\src\github.com-1ecc6299db9ec823\clipboard-win-2.2.0\src\image.rs:
