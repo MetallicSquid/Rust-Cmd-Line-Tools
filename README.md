@@ -3,7 +3,7 @@ Just a small repository of some basic command line tools made in Rust.
 
 ## The tools so far:
 
-### [mega](mega)
+### [mega](https://github.com/MetallicSquid/rust-cmd-line-tools/tree/master/mega)
 
 **MEtadata GAtherer**
 
@@ -16,8 +16,9 @@ This command line tool uses three external crates:
 
 ToDo:
  - [x]  Collect the metadata of the file.
- - [ ]  Convert all of the collected metadata into `std::string::String`.
- - [ ]  Place this metadata string into the user's clipboard.
+ - [ ]  Add support for the timestamps. 
+ - [x]  Convert all of the collected metadata into `std::string::String`.
+ - [x]  Place this metadata string into the user's clipboard.
  - [ ]  Allow for a file that is not in the immediate directory to be analysed. 
  - [ ]  Completely error-proof the whole tool.
 
