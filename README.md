@@ -20,7 +20,7 @@ This command line tool uses three external crates:
 
 ToDo:
  - [x]  Collect the metadata of the file.
- - [ ]  Add support for the timestamps. 
+ - [x]  Add support for the timestamps. 
  - [x]  Convert all of the collected metadata into `std::string::String`.
  - [x]  Place this metadata string into the user's clipboard.
  - [ ]  Allow for a file that is not in the immediate directory to be analysed. 
