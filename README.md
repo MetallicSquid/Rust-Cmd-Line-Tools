@@ -17,6 +17,7 @@ This command line tool uses three external crates:
 
 3.  [Clipboard](https://github.com/aweinstock314/rust-clipboard) - This is a crate that allows the tool to access the user's clipboard and fill it with the metadata of the file.
 
+
 ToDo:
  - [x]  Collect the metadata of the file.
  - [ ]  Add support for the timestamps. 
@@ -24,5 +25,4 @@ ToDo:
  - [x]  Place this metadata string into the user's clipboard.
  - [ ]  Allow for a file that is not in the immediate directory to be analysed. 
  - [ ]  Completely error-proof the whole tool.
-
 
