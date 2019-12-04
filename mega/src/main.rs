@@ -2,7 +2,7 @@
 // it onto the system clipboard.
 
 // All of the neccessary crates.
-use std::{path, fs::metadata, io::self, io::Write};
+use std::{path, fs::metadata};
 use structopt::StructOpt;
 use chrono::{offset::Local, DateTime};
 use clipboard::{ClipboardProvider, ClipboardContext};
