@@ -68,11 +68,15 @@ fn metadata_to_string(metadata: std::fs::Metadata) -> std::string::String{
     final_meta.push_str("\n");
     final_meta.push_str("File length: ");
     final_meta.push_str(&len_meta);
+    final_meta.push_str(" characters");
     final_meta.push_str("\n");
+    final_meta.push_str("Date & time accessed: ");
     final_meta.push_str(&accessed_meta);
     final_meta.push_str("\n");
+    final_meta.push_str("Date & time created: ");
     final_meta.push_str(&created_meta);
     final_meta.push_str("\n");
+    final_meta.push_str("Date & time modified: ");
     final_meta.push_str(&modified_meta);
 
     return final_meta;
