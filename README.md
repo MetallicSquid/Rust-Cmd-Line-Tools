@@ -14,10 +14,7 @@ This is a simple command line tool that takes a file path as an argument, gather
 * Can be used to gather metadata of files, directories and symlinks.
 * Instantaneous.
 
-### Screenshot:
-![cli_mega-demonstration](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/mega/cli_mega-demonstration.PNG)
-
-#### Relevant [README.md](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/mega/README.md).
+#### Relevant [README.md](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/mega/README.md)
 
 
 
