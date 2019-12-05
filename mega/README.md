@@ -12,6 +12,20 @@ This command line tool uses three external crates:
 
 3.  [Clipboard](https://github.com/aweinstock314/rust-clipboard) - This is a crate that allows the tool to access the user's clipboard and fill it with the metadata of the file.
 
+### Features:
+
+* Can be used to gather metadata of files, directories and symlinks.
+* Instantaneous.
+
+### Installation:
+Via cargo:
+
+```
+cargo install cli_mega
+```
+
+### Screenshot:
+![cli_mega-demonstration](cli_mega-demonstration.png)
 
 ToDo:
 
@@ -31,3 +45,6 @@ ToDo:
  
  - [ ]  Completely error-proof the whole tool.
 
+### License:
+
+This project is licensed under the MIT license. See [LICENSE](LICENSE) for more details.
