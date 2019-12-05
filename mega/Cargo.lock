@@ -62,6 +62,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "cli_mega"
+version = "0.1.0"
+dependencies = [
+ "chrono 0.4.10 (registry+https://github.com/rust-lang/crates.io-index)",
+ "clipboard 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "structopt 0.2.18 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "clipboard"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -108,15 +117,6 @@ version = "0.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "libc 0.2.66 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "mega"
-version = "0.1.0"
-dependencies = [
- "chrono 0.4.10 (registry+https://github.com/rust-lang/crates.io-index)",
- "clipboard 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "structopt 0.2.18 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
