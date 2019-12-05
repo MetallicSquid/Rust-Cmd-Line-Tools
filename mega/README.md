@@ -47,4 +47,4 @@ ToDo:
 
 ### License:
 
-This project is licensed under the MIT license. See [LICENSE](LICENSE) for more details.
+This project is licensed under the MIT license. See [LICENSE](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/LICENSE) for more details.
