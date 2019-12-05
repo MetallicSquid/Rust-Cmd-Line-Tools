@@ -1,0 +1,19 @@
+[package]
+name = "cli_mega"
+version = "0.1.1"
+authors = ["MetalicSquid <36278739+MetalicSquid@users.noreply.github.com>"]
+license = "MIT"
+description = "A tool to gather the metadata of a file"
+readme = "README.md"
+homepage = "https://github.com/MetallicSquid/rust-cmd-line-tools"
+repository = "https://github.com/MetallicSquid/rust-cmd-line-tools"
+keywords = ["cli", "files", "metadata"]
+categories = ["command-line-utilities"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+structopt = "0.2.10"
+clipboard = "0.5.0"
+chrono = "0.4.10"
