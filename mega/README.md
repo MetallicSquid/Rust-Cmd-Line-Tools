@@ -25,7 +25,7 @@ cargo install cli_mega
 ```
 
 ### Screenshot:
-![cli_mega-demonstration](cli_mega-demonstration.png)
+![cli_mega-demonstration](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/cli_mega-demonstration.PNG)
 
 ToDo:
 
