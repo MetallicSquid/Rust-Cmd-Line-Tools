@@ -57,8 +57,7 @@ fn metadata_to_string(metadata: std::fs::Metadata) -> std::string::String{
     let len_meta = metadata.len().to_string();
 
     // Concatenate all of the string data into one big string.
-    let mut final_meta = String::from("");
-    final_meta.push_str(&is_sym_meta);
+    let mut final_meta = String::from(&is_sym_meta);
     final_meta.push_str("\n");
     final_meta.push_str(&is_dir_meta);
     final_meta.push_str("\n");
