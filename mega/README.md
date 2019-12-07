@@ -27,23 +27,29 @@ cargo install cli_mega
 ### Screenshot:
 ![cli_mega-demonstration](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/mega/cli_mega-demonstration.PNG)
 
-ToDo:
+### Flags:
 
- - [x]  Collect the metadata of the file.
- 
- - [x]  Add support for the timestamps. 
- 
- - [x]  Convert all of the collected metadata into `std::string::String`.
- 
- - [x]  Place this metadata string into the user's clipboard.
- 
- - [x]  Add a help command. (Turns out that it was already done).
- 
- - [ ]  Allow the user to select the metadata they want to receive.
- 
- - [ ]  Allow for a file that is not in the immediate directory to be analysed. 
- 
- - [ ]  Completely error-proof the whole tool.
+```
+A tool to gather the metadata of a file
+
+USAGE:
+    cli_mega.exe [FLAGS] <path>
+
+FLAGS:
+    -a, --accessed     Narrow output to the time of last access.
+    -c, --created      Narrow output to the time of creation.
+    -d, --directory    Narrow output to is_directory.
+    -f, --file         Narrow output to is_file.
+    -h, --help         Prints help information
+    -l, --length       Narrow output to the length of the file.
+    -m, --modified     Narrow output to the time of last modification.
+    -r, --readonly     Narrow output to is_readonly.
+    -s, --symlink      Narrow output to is_symlink.
+    -V, --version      Prints version information
+
+ARGS:
+    <path>    Path.
+```
 
 ### License:
 
