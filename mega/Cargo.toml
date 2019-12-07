@@ -1,6 +1,6 @@
 [package]
 name = "cli_mega"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["MetalicSquid <36278739+MetalicSquid@users.noreply.github.com>"]
 license = "MIT"
 description = "A tool to gather the metadata of a file"
