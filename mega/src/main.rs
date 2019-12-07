@@ -49,6 +49,7 @@ fn gather_metadata(path: path::PathBuf) -> std::fs::Metadata {
     return metadata;
 }
 
+// Function to collect all of the flags.
 fn collect_flags(args: Cli) -> std::collections::HashMap<&'static str, bool> {
     let mut flags = HashMap::new(); 
     flags.insert("a", args.accessed);
@@ -94,20 +95,20 @@ fn metadata_to_string(metadata: std::fs::Metadata, flags: std::collections::Hash
     // Convert all of the length data into a string.
     let len_meta = metadata.len().to_string();
 
-    // Decide which data to present and which data not to.
     let mut final_meta = String::from("");
     let mut true_flags = HashMap::new();
 
+    // Remove all of the flags that weren't asked for.
     for (key, value) in flags {
         if value == true {
             true_flags.insert(key, value);
         }
     }
 
+    // Narrow down the outputted data based on the flags (if there were any).
     if true_flags.is_empty() == false {
         for (key, _value) in true_flags {
-            // Only print the neccessary data, based on the flags that returned
-            // true.
+            // Narrow down the data.
             match key {
                 "a" => {final_meta.push_str("Date & time accessed: "); final_meta.push_str(&accessed_meta); final_meta.push_str("\n")},
                 "c" => {final_meta.push_str("Date & time created: "); final_meta.push_str(&created_meta); final_meta.push_str("\n")},
@@ -117,10 +118,11 @@ fn metadata_to_string(metadata: std::fs::Metadata, flags: std::collections::Hash
                 "m" => {final_meta.push_str("Date & time modified: "); final_meta.push_str(&modified_meta); final_meta.push_str("\n")},
                 "r" => {final_meta.push_str(&is_readonly_meta); final_meta.push_str("\n")},
                 "s" => {final_meta.push_str(&is_sym_meta); final_meta.push_str("\n")},
-                _ => println!("This should never be triggered."),
+                _ => println!("This should never be triggered. Inform MetallicSquid on github if you want, or not, it's fine either way."),
             }
         }
     } else {
+        // Output all of the data.
         final_meta.push_str(&is_sym_meta);
         final_meta.push_str("\n");
         final_meta.push_str(&is_dir_meta);
