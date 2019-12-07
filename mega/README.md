@@ -37,7 +37,7 @@ ToDo:
  
  - [x]  Place this metadata string into the user's clipboard.
  
- - [ ]  Add a help command.
+ - [x]  Add a help command. (Turns out that it was already done).
  
  - [ ]  Allow the user to select the metadata they want to receive.
  

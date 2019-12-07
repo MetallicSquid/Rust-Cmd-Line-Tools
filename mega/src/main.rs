@@ -2,7 +2,7 @@
 // it onto the system clipboard.
 
 // All of the neccessary crates.
-use std::{path, fs::metadata};
+use std::{path, fs::metadata, collections::HashMap};
 use structopt::StructOpt;
 use chrono::{offset::Local, DateTime};
 use clipboard::{ClipboardProvider, ClipboardContext};
@@ -10,23 +10,61 @@ use clipboard::{ClipboardProvider, ClipboardContext};
 // A struct to collect the user input.
 #[derive(StructOpt)]
 struct Cli {
-    // The path for the tool to read.
+    /// Path.
     #[structopt(parse(from_os_str))]
     path: path::PathBuf,
+    /// Narrow output to the time of last access.
+    #[structopt(short, long)]
+    accessed: bool,
+    /// Narrow output to the time of creation.
+    #[structopt(short, long)]
+    created: bool,
+    /// Narrow output to the time of last modification.
+    #[structopt(short, long)]
+    modified: bool,
+    /// Narrow output to is_symlink.
+    #[structopt(short, long)]
+    symlink: bool,
+    /// Narrow output to is_directory.
+    #[structopt(short, long)]
+    directory: bool,
+    /// Narrow output to is_file.
+    #[structopt(short, long)]
+    file: bool,
+    /// Narrow output to is_readonly.
+    #[structopt(short, long)]
+    readonly: bool,
+    /// Narrow output to the length of the file.
+    #[structopt(short, long)]
+    length: bool,
 }
 
 // Function to gather the metadata of the file.
 fn gather_metadata(path: path::PathBuf) -> std::fs::Metadata {
     let metadata = match metadata(path) {
         Ok(metadata) => metadata,
-        Err(error) => panic!("The file couldn't be found. It's probably in another directory. ({})", error),
+        Err(_error) => panic!("The file couldn't be found. You probably gave an invalid/nonexistant file name."),
     };
 
     return metadata;
 }
 
+fn collect_flags(args: Cli) -> std::collections::HashMap<&'static str, bool> {
+    let mut flags = HashMap::new(); 
+    flags.insert("a", args.accessed);
+    flags.insert("c", args.created);
+    flags.insert("d", args.directory);
+    flags.insert("f", args.file);
+    flags.insert("l", args.length);
+    flags.insert("m", args.modified);
+    flags.insert("r", args.readonly);
+    flags.insert("s", args.symlink);
+
+    return flags;
+}
+
 // Function to convert the gathered metadata into a string.
-fn metadata_to_string(metadata: std::fs::Metadata) -> std::string::String{
+fn metadata_to_string(metadata: std::fs::Metadata, flags: std::collections::HashMap<&str, bool>) -> std::string::String {
     // Convert all of the system time data into a string.
     let accessed_time: DateTime<Local> = metadata.accessed().unwrap().into();
     let accessed_meta = accessed_time.format("%d/%m/%Y %T").to_string();
@@ -56,27 +94,54 @@ fn metadata_to_string(metadata: std::fs::Metadata) -> std::string::String{
     // Convert all of the length data into a string.
     let len_meta = metadata.len().to_string();
 
-    // Concatenate all of the string data into one big string.
-    let mut final_meta = String::from(&is_sym_meta);
-    final_meta.push_str("\n");
-    final_meta.push_str(&is_dir_meta);
-    final_meta.push_str("\n");
-    final_meta.push_str(&is_file_meta);
-    final_meta.push_str("\n");
-    final_meta.push_str(&is_readonly_meta);
-    final_meta.push_str("\n");
-    final_meta.push_str("File length: ");
-    final_meta.push_str(&len_meta);
-    final_meta.push_str(" characters");
-    final_meta.push_str("\n");
-    final_meta.push_str("Date & time accessed: ");
-    final_meta.push_str(&accessed_meta);
-    final_meta.push_str("\n");
-    final_meta.push_str("Date & time created: ");
-    final_meta.push_str(&created_meta);
-    final_meta.push_str("\n");
-    final_meta.push_str("Date & time modified: ");
-    final_meta.push_str(&modified_meta);
+    // Decide which data to present and which data not to.
+    let mut final_meta = String::from("");
+    let mut true_flags = HashMap::new();
+
+    for (key, value) in flags {
+        if value == true {
+            true_flags.insert(key, value);
+        }
+    }
+
+    if true_flags.is_empty() == false {
+        for (key, _value) in true_flags {
+            // Only print the neccessary data, based on the flags that returned
+            // true.
+            match key {
+                "a" => {final_meta.push_str("Date & time accessed: "); final_meta.push_str(&accessed_meta); final_meta.push_str("\n")},
+                "c" => {final_meta.push_str("Date & time created: "); final_meta.push_str(&created_meta); final_meta.push_str("\n")},
+                "d" => {final_meta.push_str(&is_dir_meta); final_meta.push_str("\n")},
+                "f" => {final_meta.push_str(&is_file_meta); final_meta.push_str("\n")},
+                "l" => {final_meta.push_str(&len_meta); final_meta.push_str("\n")},
+                "m" => {final_meta.push_str("Date & time modified: "); final_meta.push_str(&modified_meta); final_meta.push_str("\n")},
+                "r" => {final_meta.push_str(&is_readonly_meta); final_meta.push_str("\n")},
+                "s" => {final_meta.push_str(&is_sym_meta); final_meta.push_str("\n")},
+                _ => println!("This should never be triggered."),
+            }
+        }
+    } else {
+        final_meta.push_str(&is_sym_meta);
+        final_meta.push_str("\n");
+        final_meta.push_str(&is_dir_meta);
+        final_meta.push_str("\n");
+        final_meta.push_str(&is_file_meta);
+        final_meta.push_str("\n");
+        final_meta.push_str(&is_readonly_meta);
+        final_meta.push_str("\n");
+        final_meta.push_str("File length: ");
+        final_meta.push_str(&len_meta);
+        final_meta.push_str(" characters");
+        final_meta.push_str("\n");
+        final_meta.push_str("Date & time accessed: ");
+        final_meta.push_str(&accessed_meta);
+        final_meta.push_str("\n");
+        final_meta.push_str("Date & time created: ");
+        final_meta.push_str(&created_meta);
+        final_meta.push_str("\n");
+        final_meta.push_str("Date & time modified: ");
+        final_meta.push_str(&modified_meta);
+    }
 
     return final_meta;
 }
@@ -88,18 +153,16 @@ fn clip_copy(meta_string: &std::string::String) {
 }
 
 fn main() {
-    // Collect the path of the file input.
-    let args = Cli::from_args();
+    // Collect all of the flags. 
+    let flags = collect_flags(Cli::from_args());
 
     // Collect the metadata of the file by running the above functions, then add
     // it to the clipboard.
-    let meta: std::string::String = metadata_to_string(gather_metadata(args.path));
+    let meta: std::string::String = metadata_to_string(gather_metadata(Cli::from_args().path), flags);
     clip_copy(&meta);
 
     // Output the metadata of the file to the console. I might want to use a
-    // BufWriter in the future, but I'm only printing twice, so this seems
+    // BufWriter in the future, but I'm only printing once, so this seems
     // pointless.
-
-    println!("This is already in your clipboard:\n");
     println!("{}", &meta);
 }
