@@ -6,7 +6,7 @@ This is a simple command line tool that takes a file path as an argument, gather
 
 This command line tool uses three external crates:
 
-1.  [Structopt](https://github.com/TeXitoi/structopt) - This is a crate that (in this case) allows for the command line tool to take in a file path as an argument and then use and manipulate it.
+1.  [Structopt](https://github.com/TeXitoi/structopt) - This is a crate that allows for the command line tool to take in a file path as an argument and then use and manipulate it.
 
 2.  [Chrono](https://github.com/chronotope/chrono) - This is a crate that allows for the conversion between `std::time::SystemTime` to a `std::string::String`, so that it can be pasted onto the user's clipboard.
 
@@ -25,7 +25,7 @@ cargo install cli_mega
 ```
 
 ### Screenshot:
-![cli_mega-demonstration](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/mega/cli_mega-demonstration.PNG)
+![cli_mega-demonstration](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/mega/cli_mega-demonstration-2.png)
 
 ### Flags:
 
