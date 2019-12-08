@@ -15,20 +15,3 @@ This is a simple command line tool that takes a file path as an argument, gather
 * Instantaneous.
 
 #### Relevant [README.md](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/mega/README.md)
-
-### [tico](https://github.com/MetallicSquid/rust-cmd-line-tools/tree/master/tico)
-
-**TImezone COnverter**
-
-This is a simple command line tool that takes a time and its timezone and converts it to another, user specified timezone.
-
-#### Features:
-
-* This hasn't been made yet, so there are no features.
-
-#### Relevant [README.md](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/tico/README.md)
-
-
-
-
-
