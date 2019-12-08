@@ -1,4 +1,4 @@
-# [tico](tico)
+# [tico](https://github.com/MetallicSquid/rust-cmd-line-tools/tree/master/tico)
 
 ## **TImezone COnverter**
 
