@@ -114,7 +114,7 @@ fn metadata_to_string(metadata: std::fs::Metadata, flags: std::collections::Hash
                 "c" => {final_meta.push_str("Date & time created: "); final_meta.push_str(&created_meta); final_meta.push_str("\n")},
                 "d" => {final_meta.push_str(&is_dir_meta); final_meta.push_str("\n")},
                 "f" => {final_meta.push_str(&is_file_meta); final_meta.push_str("\n")},
-                "l" => {final_meta.push_str("File length: "); final_meta.push_str(&len_meta); final_meta.push_str("\n"); final_meta.push_str(" characters");},
+                "l" => {final_meta.push_str("File length: "); final_meta.push_str(&len_meta); final_meta.push_str(" characters"); final_meta.push_str("\n");},
                 "m" => {final_meta.push_str("Date & time modified: "); final_meta.push_str(&modified_meta); final_meta.push_str("\n")},
                 "r" => {final_meta.push_str(&is_readonly_meta); final_meta.push_str("\n")},
                 "s" => {final_meta.push_str(&is_sym_meta); final_meta.push_str("\n")},
