@@ -1,4 +1,4 @@
-# fifi
+# [fifi](https://github.com/MetallicSquid/rust-cmd-line-tools/tree/master/fifi)
 
 ## **FIle FInder**
 
@@ -16,4 +16,4 @@ This command line tool will use three external crates:
 
 ### License:
 
-This project is licensed under the MIT license. See LICENSE for more details.
+This project is licensed under the MIT license. See [LICENSE](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/LICENSE) for more details.
