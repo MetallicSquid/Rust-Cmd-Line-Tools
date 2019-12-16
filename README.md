@@ -15,3 +15,15 @@ This is a simple command line tool that takes a file path as an argument, gather
 * Instantaneous.
 
 #### Relevant [README.md](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/mega/README.md)
+
+### Fifi
+
+**FIle FInder**
+
+This will be a command line tool that finds files in the user's computer that have metadata matching the provided information.
+
+#### Features:
+
+* There are none, it hasn't been made.
+
+#### Relevant README.md
