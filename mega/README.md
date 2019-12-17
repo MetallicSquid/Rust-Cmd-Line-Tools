@@ -4,6 +4,8 @@
 
 This is a simple command line tool that takes a file path as an argument, gathers the avaliable metadata of the file and places it inside of the user's clipboard.
 
+**NB: This is only temporary, but the output of the length function should be bytes instead of characters. I will change this when I also have a few other features to throw in.**
+
 This command line tool uses three external crates:
 
 1.  [Structopt](https://github.com/TeXitoi/structopt) - This is a crate that allows for the command line tool to take in a file path as an argument and then use and manipulate it.
