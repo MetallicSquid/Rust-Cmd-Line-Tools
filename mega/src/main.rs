@@ -69,8 +69,18 @@ fn metadata_to_string(metadata: std::fs::Metadata, flags: std::collections::Hash
     // Convert all of the system time data into a string.
     let accessed_time: DateTime<Local> = metadata.accessed().unwrap().into();
     let accessed_meta = accessed_time.format("%d/%m/%Y %T").to_string();
-    let created_time: DateTime<Local> = metadata.created().unwrap().into();
-    let created_meta = created_time.format("%d/%m/%Y %T").to_string();
+
+    // Creation time doesn't work on all systems, so this needs to be fixed.
+    let mut created_meta = "".to_string();
+    
+    if let Ok(time) = metadata.created() {
+        let created_time: DateTime<Local> = metadata.created().unwrap().into();
+        created_meta = created_time.format("%d/%m/%Y %T").to_string();
+
+    } else {
+        created_meta = "Not supported on this platform, sorry.".to_string();
+    }
+
     let modified_time: DateTime<Local> = metadata.modified().unwrap().into();
     let modified_meta = modified_time.format("%d/%m/%Y %T").to_string();
 

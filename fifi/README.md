@@ -4,7 +4,7 @@
 
 This will be a command line tool that finds files in the user's computer that have metadata matching the provided information.
 
-This command line tool will use three external crates:
+This command line tool will use two external crates:
 
 1.  [Structopt](https://github.com/TeXitoi/structopt) - This is a crate that allows for the command line tool to take in a file path as an argument and then use and manipulate it.
 
