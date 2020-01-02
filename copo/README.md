@@ -1,4 +1,4 @@
-#[copo](https://github.com/MetallicSquid/rust-cmd-line-tools/tree/master/copo)
+# [copo](https://github.com/MetallicSquid/rust-cmd-line-tools/tree/master/copo)
 
 ## **MEtadata GAtherer**
 
