@@ -16,14 +16,14 @@ This is a simple command line tool that takes a file path as an argument, gather
 
 #### Relevant [README.md](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/mega/README.md)
 
-### [fifi](https://github.com/MetallicSquid/rust-cmd-line-tools/tree/master/fifi)
+### [copo](https://github.com/MetallicSquid/rust-cmd-line-tools/)
 
-**FIle FInder**
+**COmmand line POmodoro timer**
 
-This will be a command line tool that finds files in the user's computer that have metadata matching the provided information.
+This will be a command line tool that starts a pomodoro timer based on the user's specification (through flags).
 
 #### Features:
 
 * There are none, it hasn't been made.
 
-#### Relevant [README.md](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/fifi/README.md)
+#### Relevant [README.md](https://github.com/MetallicSquid/rust-cmd-line-tools/)
