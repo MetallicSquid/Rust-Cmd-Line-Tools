@@ -16,7 +16,7 @@ This is a simple command line tool that takes a file path as an argument, gather
 
 #### Relevant [README.md](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/mega/README.md)
 
-### [copo](https://github.com/MetallicSquid/rust-cmd-line-tools/)
+### [copo](https://github.com/MetallicSquid/rust-cmd-line-tools/tree/master/copo)
 
 **COmmand line POmodoro timer**
 
@@ -26,4 +26,4 @@ This will be a command line tool that starts a pomodoro timer based on the user'
 
 * There are none, it hasn't been made.
 
-#### Relevant [README.md](https://github.com/MetallicSquid/rust-cmd-line-tools/)
+#### Relevant [README.md](https://github.com/MetallicSquid/rust-cmd-line-tools/blob/master/copo/README.md)
